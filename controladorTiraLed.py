@@ -137,7 +137,7 @@ def ArcoirisFijo(strip, wait_ms=60):
             return
 
 def CicloArcoiris(strip, invertido=0, wait_ms=20):
-    """Las luces cambian pasando por todos los colores no simétricamente."""
+    """Las luces cambian pasando por todos los colores no simetricamente."""
     for j in range(256):
         for i in range(strip.numPixels()):
             strip.setPixelColor(i, wheel((int(i * 256 / strip.numPixels()) + (1-invertido)*(255-j)+ invertido*j) & 255))
@@ -149,7 +149,7 @@ def CicloArcoiris(strip, invertido=0, wait_ms=20):
 
 
 def CicloArcoirisEspejo(strip, invertido=0, wait_ms=20):
-    """Las luces cambian pasando por todos los colores simétricamente."""
+    """Las luces cambian pasando por todos los colores simetricamente."""
     longitud=strip.numPixels()
     for j in range(256):
         for i in range(longitud/2):
