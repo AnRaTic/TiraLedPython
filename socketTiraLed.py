@@ -13,7 +13,7 @@ serverPort = 6001     # Puerto por encima de 1024
 
 
 class Controlador:
-    """Controla la recepción de cambios y colores."""
+    """Controla la recepcion de cambios y colores."""
     def __init__(self):
         """inicia el controlador"""
         self.estado = 0
@@ -47,7 +47,7 @@ class Controlador:
 class MyServer(SimpleHTTPServer.SimpleHTTPRequestHandler):
     """Maneja las diferentes peticiones"""
     def do_GET(self):
-        """maneja la petición GET"""
+        """maneja la peticion GET"""
         print ("estodo es igual a {estado="+str(controlador.estado)+"}")
         self.send_response(200)
         self.send_header("Access-Control-Allow-Origin", "*")
@@ -55,7 +55,7 @@ class MyServer(SimpleHTTPServer.SimpleHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(bytes('{"estado":'+str(controlador.estado)+'}'))
     def do_POST(self):
-        """maneja la petición POST"""
+        """maneja la peticion POST"""
         content_length = int(self.headers['Content-Length'])
         body = self.rfile.read(content_length)
         print ("se ha recibido = " + body)
