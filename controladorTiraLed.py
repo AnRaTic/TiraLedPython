@@ -10,9 +10,9 @@ LED_COUNT      = 16      # Numero de Leds.
 LED_PIN        = 18      # GPIO pin conectado a la tira (el 18 usa PWM!).
 #LED_PIN        = 10      # GPIO pin conectado a la tira (el 10 usa SPI /dev/spidev0.0).
 LED_FREQ_HZ    = 800000  # Frecuencia de la senal Led en hercios (normalmente 800khz)
-LED_DMA        = 10      # Canal DMA a usar para generar la señal (try 10)
+LED_DMA        = 10      # Canal DMA a usar para generar la senal (try 10)
 LED_BRIGHTNESS = 255     # Poner a 0 para el mas oscuro y 255 para el mas brillante
-LED_INVERT     = False   # True para invertir la señal (when using NPN transistor level shift)
+LED_INVERT     = False   # True para invertir la senal (when using NPN transistor level shift)
 LED_CHANNEL    = 0       # Poner a 1 para GPIOs 13, 19, 41, 45 or 53
 
 
